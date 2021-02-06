@@ -1,0 +1,86 @@
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyl.dao.FileDao">
+	&lt;!&ndash;collection表 &ndash;&gt;
+	<insert id="insAFileToCollection"
+		parameterType="com.lyl.pojo.Collection">
+		insert into collection
+		values(default,#{uid},#{fname},#{type},#{size},#{location},#{cdate})
+	</insert>
+	<delete id="delAFileFromCollection" parameterType="long">
+		delete from collection where cid=#{cid}
+	</delete>
+	<select id="selCollectionFile" parameterType="long"
+		resultType="com.lyl.pojo.Collection">
+		select * from collection where uid=#{uid}
+	</select>
+	<select id="selAFileFromCollection" parameterType="long"
+		resultType="com.lyl.pojo.Collection">
+		select * from collection where cid=#{cid}
+	</select>
+	&lt;!&ndash;delrecord表 &ndash;&gt;
+	<insert id="insAFileToRecycleBin"
+		parameterType="com.lyl.pojo.DelRecord">
+		insert into delrecord
+		values(default,#{uid},#{fname},#{type},#{size},#{location},#{ddate})
+	</insert>
+	<select id="selRecycleBinFile" parameterType="long"
+		resultType="com.lyl.pojo.DelRecord">
+		select * from delrecord where uid=#{uid}
+	</select>
+	<delete id="delAFileFromRecycleBin" parameterType="long">
+		delete from delrecord where did=#{did}
+	</delete>
+	<select id="selAFileFromRecycleBin" parameterType="long"
+		resultType="com.lyl.pojo.DelRecord">
+		select * from delrecord where did=#{did}
+	</select>
+	&lt;!&ndash;share表 &ndash;&gt;
+	<select id="selFileFromShare" resultType="com.lyl.pojo.Share">
+		select * from share
+	</select>
+	<select id="selAFileFromShare" parameterType="long"
+		resultType="com.lyl.pojo.Share">
+		select * from share where sid=#{sid}
+	</select>
+	<select id="selQueryFileFromShare" parameterType="String"
+		resultType="com.lyl.pojo.Share">
+		select * from share where fname like #{param1}
+	</select>
+	<insert id="insShare" parameterType="com.lyl.pojo.UpRecord">
+		insert into share (uid,fname,type,size,location,sdate)
+		values(#{uid},#{fname},#{type},#{size},#{location},current_date())
+	</insert>
+	&lt;!&ndash;uprecord表 &ndash;&gt;
+	<select id="getUpRecord" parameterType="long"
+		resultType="com.lyl.pojo.UpRecord">
+		select uid,fname,type,size,location from uprecord where pid=#{param1}
+	</select>
+	<insert id="insUploadFile" parameterType="com.lyl.pojo.UpRecord">
+		insert into uprecord (uid,fname,type,size,location,udate)
+		values(#{uid},#{fname},#{type},#{size},#{location},#{udate})
+	</insert>
+	<select id="selUploadRecord" parameterType="long"
+		resultType="com.lyl.pojo.UpRecord">
+		select uid,fname,type,size,udate,pid from uprecord where uid=#{uid}
+	</select>
+	<delete id="delAUpRecord" parameterType="long">
+		delete from uprecord where pid=#{pid}
+	</delete>
+	&lt;!&ndash;downrecord表 &ndash;&gt;
+	<select id="selDownRecord" parameterType="long"
+		resultType="com.lyl.pojo.DownRecord">
+		select * from downrecord where uid=#{uid}
+	</select>
+	<insert id="insADownRecord"
+		parameterType="com.lyl.pojo.DownRecord">
+		insert into downrecord
+		values(default,#{uid},#{fname},#{type},#{size},default,#{wdate})
+	</insert>
+	<delete id="delADownRecord" parameterType="long">
+		delete from downrecord where wid=#{wid}
+	</delete>
+</mapper>-->

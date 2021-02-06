@@ -1,0 +1,23 @@
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyl.dao.UserDao">
+	<update id="updVolume">
+		update user set volume=#{param1} where uid=#{param2}
+	</update>
+	<select id="selAUserById" parameterType="long"
+		resultType="com.lyl.pojo.User">
+		select * from user where uid=#{param1}
+	</select>
+	<select id="selAUaerForLogin" resultType="com.lyl.pojo.User">
+		select * from user where uid=#{param1} and password=#{param2}
+	</select>
+	<update id="updIdentity">
+		update user set identity=#{param1} where uid=#{param2}
+	</update>
+	<insert id="insRegister">
+		insert into user values(#{uid},#{password},#{photo},#{volume},#{identity})
+	</insert>
+</mapper>-->

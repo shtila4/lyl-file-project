@@ -1,0 +1,183 @@
+@author masw
+@Date 2020-10-24
+@Project lyl-file-project
+@For LYL
+
+                                   项目要求
+一、设计方面(符合标准)
+1.Spring boot
+2.Lay UI
+3.Spring security
+3.ECharts
+4.Git
+5.Mysql
+
+二、工具(符合标准)
+Idea2020
+Mysql8.0
+Tomcat9.0
+Maven
+Git
+Microsoft office
+
+                                  文件共享平台
+一、功能
+---------------------------------------------------
+全体用户涉及
+---------------------------------------------------
+个人空间
+   我的收藏
+       收藏记录查询
+       预览
+       下载
+       加入回收站
+   我的容量
+       我的剩余容量查询
+       今日已用流量查询
+   我的分享
+       我的上传记录查询
+       分享记录删除
+   我的下载
+       我的下载记录查询
+   我的上传
+       我的上传记录查询
+历史浏览
+    查询历史预览记录
+邮箱
+  发送QQ邮件
+共享空间
+  共享文件资料
+       共享资料查询（审核通过的）
+       收藏
+       下载
+       预览
+回收站
+  回收文件资料
+       回收站文件查询
+       回收站文件删除
+       回收站文件恢复
+数据量分析
+  我的下载统计
+      折线图
+  文件类型统计
+      饼状图
+  全网统计
+      实时全网查询（用户/下载量/上传量）
+帮助文档
+  帮助文档的查看
+用户问题反馈
+  反馈问题给出评价
+      上传用户问题
+  联系我
+      查看联系方式
+----------------------------
+管理员涉及功能
+----------------------------
+管理员审核
+    显示用户上传的未审核的文件
+    审核（同意/不同意/删除）
+用户问题上报
+    上报
+    删除
+
+二、项目结构
+   spring boot（SSM）
+   maven3.6.3（jar包管理）
+   LayUI(前端页面)
+   ECharts(报表显示)
+   spring security（权限控制，角色授权）----->全体用户/管理员
+   Mysql8.0 数据库
+   tomcat9.0 服务器
+   GIT 版本控制，协同开发
+
+三、项目分层
+    config 配置层
+    controller 控制器层
+    mapper 持久层
+    pojo 实体类层
+    service 业务逻辑层
+    util 工具类层
+    VO 模型视图转换层
+    static 静态文件
+    templates html页面
+    application spring boot配置文件
+
+四、选题审批
+一、课题方向：JavaEE 开发
+
+二、题目名称：文件资料共享平台
+
+三、选题的目的和理论、实践意义：
+
+---------------------------------------------------------------------------------------------------
+随着人们办公和生活的快节奏，对于文件等资料的共享以及实时传输的要求也越来越高。市面上也有许多文件资料共享的平台及软件，但是因其一些额外的要求比如只有开通会员才能加速下载和传输，才能在不下载的情况下预览文件的内容等等，这样以来如果用户想要下载一个数据量大的文件又不想花钱怎么办。因此，一款真正高效以及无过多要求的文件共享平台，才是用户真正所需的。
+文件资料共享平台的开发，为广大用户提供了一个免费的，高效的，轻量级的文件共享平台。使用方便，安全性高，下载及传输速度高等优点，为用户量身打造。
+
+---------------------------------------------------------------------------------------------------
+二十一世纪是信息的时代，随着科学技术的高速发展，资源、信息的共享已越来越成为时代的主题。只有资源共享，优势互补，才能达成共赢。人类社会已经进入网络和数字化时代，在这样一个时代，信息资源的建设与共享已经成为时代发展的需要和必然，它的兴起与发展有着划时代的意义。因此我们通过实现一个文献资料共享平台，让大家可以在这个平台分享自己的资料，也可以获得别人分享的资料，实现了数据共享，提高了信息资源利用率，可以使更多的人更充分地使用已有数据资源，减少资料收集、数据采集等重复劳动和相应费用。
+
+
+四、功能
+
+1.个人空间模块：
+    1.1收藏文件的显示、预览、加入回收站
+1.2剩余容量分析
+1.3上传文件的显示与删除
+1.4下载文件的显示与删除
+1.5文件上传
+
+2.共享空间模块：
+1.1全体用户分享文件的显示、收藏、预览
+
+3.回收站模块：
+1.1回收站中文件的显示、恢复、删除
+
+4.数据量分析模块：
+1.1 我的下载统计（折线图）
+1.2 文件类型统计（饼转图）
+1.3 全网统计（全网用户统计、下载统计、上传统计）
+
+5.查看用户帮助手册
+
+6.用户问题反馈模块
+   1.1 用户问题反馈服务
+
+7.管理员模块
+   1.1 管理员审核用户上传文件
+      1.1.1 审批用户上传的文件
+      1.1.2 对违规上传文件的删除
+   1.2 用户反馈问题的上报
+8.邮箱模块
+   8.1 发送邮件
+
+五、SQL脚本
+
+create table delrecord(did bigint not null auto_increment,uid bigint,fname varchar(20) not null,type varchar(4) not null,size bigint not null,location varchar(50) not null,ddate date not null,primary key (did));
+
+create table collection(cid bigint not null auto_increment,uid bigint,fname varchar(20) not null,type varchar(4) not null,size bigint not null,location varchar(50) not null,cdate date not null,primary key (cid));
+
+create table user( uid bigint not null auto_increment,password varchar(11) not null,photo varchar(50) not null,volume bigint not null,identity varchar(5) not null,primary key (uid));
+
+create table share(sid bigint not null auto_increment,uid bigint,fname varchar(20) not null,type varchar(4) not null,size bigint not null,location varchar(50) not null,state int not null ,result int not null,sdate date not null,primary key (sid));
+
+create table uprecord(pid bigint not null auto_increment,uid bigint,fname varchar(20) not null,type varchar(4) not null,size bigint not null,location varchar(50) not null,udate VARCHAR(20)
+not null, primary key (pid));
+
+create table downrecord(wid bigint not null auto_increment, uid bigint,fname varchar(20) not null,type varchar(4) not null,size bigint not null,location varchar(50) not null,wdate date not null,primary key (wid));
+
+create table quesion(qid bigint not null auto_increment,uid bigint not null,aim varchar(50), evaluation varchar(50),msg  varchar(200),primary key (qid))
+
+create table history(hid bigint not null auto_increment, uid bigint,fname varchar(20) not null,type varchar(4) not null,size bigint not null,location varchar(50) not null,hdate date not null,primary key (hid))
+
+alter table downrecord MODIFY location varchar(50) DEFAULT 'D:\Google\GoogleDownload'
+
+
+
+
+
+
+
+
+
+
+

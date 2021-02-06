@@ -1,0 +1,190 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "page/welcome-1.html?t=1"
+  },
+  "logoInfo": {
+    "title": "LYL",
+    "image": "images/logo.png",
+    "href": "#"
+  },
+  "menuInfo": [
+    {
+      "title": "文件分享平台",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "个人空间",
+          "href": "",
+          "icon": "fa fa-home",
+          "target": "_self",
+          "child": [
+            {
+              "title": "我的收藏",
+              "href": "page/table.html",
+              "icon": "fa fa-heart",
+              "target": "_self"
+            },
+            {
+              "title": "我的容量",
+              "href": "page/welcome-2.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            },
+            {
+              "title": "我的分享",
+              "href": "page/table1.html",
+              "icon": "fa fa-send",
+              "target": "_self"
+            },
+            {
+              "title": "我的下载",
+              "href": "page/table2.html",
+              "icon": "fa fa-arrow-down",
+              "target": "_self"
+            },
+            {
+              "title": "文件上传",
+              "href": "page/upload1.html",
+              "icon": "fa fa-arrow-up",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "浏览历史",
+          "href": "",
+          "icon": "fa fa-clock-o",
+          "target": "_self",
+          "child": [
+            {
+              "title": "浏览历史",
+              "href": "page/table7.html",
+              "icon": "fa fa-clock-o",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "邮箱",
+          "href": "",
+          "icon": "fa fa-envelope",
+          "target": "_self",
+          "child": [
+            {
+              "title": "发送邮件",
+              "href": "page/sendMail.html",
+              "icon": "fa fa-arrow-circle-right",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "共享空间",
+          "href": "",
+          "icon": "fa fa-group",
+          "target": "_self",
+          "child": [
+            {
+              "title": "共享空间",
+              "href": "page/table3.html",
+              "icon": "fa fa-group",
+              "target": "_self",
+              "child": []
+            }
+          ]
+        },
+        {
+          "title": "回收站",
+          "href": "",
+          "icon": "fa fa-trash",
+          "target": "_self",
+          "child": [
+            {
+              "title": "回收站",
+              "href": "page/table4.html",
+              "icon": "fa fa-trash",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "数据量分析",
+          "href": "",
+          "icon": "fa fa-calendar",
+          "target": "_self",
+          "child": [
+            {
+              "title": "我的下载统计",
+              "href": "page/w-1.html",
+              "icon": "fa fa-bar-chart-o",
+              "target": "_self"
+            },
+            {
+              "title": "文件类型统计",
+              "href": "page/w-2.html",
+              "icon": "fa fa-pie-chart",
+              "target": "_self"
+            },
+            {
+              "title": "全网统计",
+              "href": "page/welcome-3.html",
+              "icon": "fa fa-tv",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "帮助文档",
+          "href": "",
+          "icon": "fa fa-paste",
+          "target": "_self",
+          "child": [
+            {
+              "title": "用户手册",
+              "href": "page/color-select.html",
+              "icon": "fa fa-file-o",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "用户问题反馈",
+          "href": "",
+          "icon": "fa fa-commenting",
+          "target": "_self",
+          "child": [
+            {
+              "title": "反馈",
+              "href": "page/form.html",
+              "icon": "fa fa-envelope-open-o",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "设置",
+          "href": "",
+          "icon": "fa fa-cog",
+          "target": "_self",
+          "child": [
+            {
+              "title": "主题颜色",
+              "href": "",
+              "icon": "fa fa-asterisk",
+              "target": "_self"
+            },
+            {
+              "title": "系统公告",
+              "href": " page/announcement.html",
+              "icon": "fa fa-volume-up",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

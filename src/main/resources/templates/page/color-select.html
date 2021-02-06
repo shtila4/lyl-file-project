@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户手册</title>
+    <link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+
+
+        <pre class="layui-code">
+            <p>如有任何问题和建议请加QQ：2933765211</p>
+            <p>如有任何问题和建议请加手机：15776457465</p>
+     <p>1会员扩容，开通会员可以扩大免费的存储容量。</p>
+    <p>第1步：用户选择开通会员功能</p>
+    <p>第2步：用户选择支付方式</p>
+    <p>第3步：用户输入密码</p>
+    <p>第4步：用户点击确定，退出至主页面</p>
+    <p>2文件预览，支持常规格式的在线文件预览，无需下载即可观看。</p>
+    <p>第1步：用户点击资源共享区</p>
+    <p>第2步：用户点击预览按钮</p>
+    <p>3文件分享，登录后即可在文件共享区看到所有被分享的文件。</p>
+    <p>第1步：用户点击上传文件</p>
+    <p>第2步：用户选定文件</p>
+    <p>第3步：用户点击确定</p>
+    <p>4文件搜索，可以在搜索框通过关键字在文件共享区搜索到想要的文件。</p>
+    <p>第1步：用户点击资源共享区</p>
+    <p>第2步：在搜索框内输入所要查找的文件名称或关键字</p>
+    <p>第3步：用户点击搜索按钮</p>
+    <p>5文件下载，登录后即可在文件共享区或个人收藏下载所有被分享的文件。</p>
+    <p>第1步：用户点击个人空间中文件的下载按钮</p>
+    <p>第2步：用户选择本地目录</p>
+    <p>第3步：用户点击确定下载</p>
+    <p>6文件收藏，登录后即可在文件共享区收藏所有被分享的文件。</p>
+    <p>第1步：用户点击资源共享区</p>
+    <p>第2步：用户选中所要收藏的文件</p>
+    <p>第3步：用户点击收藏按钮</p>
+    <p>7加入回收站，删除自己分享的文件。</p>
+    <p>第1步：用户选择文件点击加入回收站</p>
+    <p>第2步：用户选择是</p>
+    <p>8恢复文件，恢复自己删除的文件。</p>
+    <p>第1步：用户点击回收站</p>
+    <p>第2步：用户点击要恢复的文件</p>
+    <p>第3步：用户点击确定</p>
+    <p> 9删除回收站文件，将加入回收站的文件永久性删除<p>
+    <p>第1步：用户点击回收站中文件的删除按钮</p>
+    <p>第2步：用户选择是</p>
+
+        </pre>
+    </div>
+</div>
+<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script src="../lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script src="../lib/jq-module/paigusu.min.js" charset="utf-8"></script>
+<script>
+    $(function () {
+        $('.test-select-color').paigusu({
+            color: '#1aa094',//初始色  支持两种配置方案
+        }, function (event, obj) {
+            console.log(event);
+            console.log(obj);
+            $(event).css('background-color', '#' + obj.hex);
+            $('input[name="test_color"]').val('#' + obj.hex);
+        });
+    });
+</script>
+</body>
+</html>
